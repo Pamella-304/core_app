@@ -15,6 +15,7 @@ class Destination {
     var birthDate: Date
     var periodPhase: Bool
     var password: String
+    @Relationship(deleteRule: .cascade) var jobs = [Job]()
 
     init(name: String = "", email: String = "", birthDate: Date = .now, periodPhase: Bool = false, password: String = "") {
         self.name = name
