@@ -52,16 +52,19 @@ struct CalendarView: View {
                         .font(.system(.title2))
 
                     LazyHStack(alignment: .top) {
-                        LazyVStack {
+                        LazyVStack(alignment: .leading) {
                             SelectedFrame(cycle: cycleService.cycles.first!,
                                           context: context, selectionType: .symptons, date: Date())
                             SelectedFrame(cycle: cycleService.cycles.first!,
                                           context: context, selectionType: .mood, date: Date())
                         }
-                        LazyVStack {
+                        .frame(maxWidth: .infinity)
+                        Spacer()
+                        LazyVStack(alignment: .leading) {
                             LibidoIntensityFrame()
                             FlowPeriodIntensity()
                         }
+                        .frame(maxWidth: .infinity)
                     }
 
                     Spacer()

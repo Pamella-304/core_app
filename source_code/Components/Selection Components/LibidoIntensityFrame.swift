@@ -23,6 +23,7 @@ struct LibidoIntensityFrame: View {
                 .foregroundColor(Colors.purple_800)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.custom("SF Pro", size: 17))
+            
             HStack(spacing: 20) {
                 VStack(spacing: 8) {
                     libidoButton(intensity: .low)

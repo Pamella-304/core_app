@@ -21,7 +21,7 @@ struct FlowPeriodIntensity: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("How is your menstrual flow today?")
-                .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Colors.purple_800)
                 .font(.custom("SF Pro", size: 17))
 
@@ -42,12 +42,11 @@ struct FlowPeriodIntensity: View {
                     libidoButton(flow: .intense)
                     Text("Intense")
                 }
-            }.frame(alignment: .center)
+            }
                 .foregroundColor(Colors.gray_800)
                 .font(.custom("SF Pro", size: 12))
         }
         .padding(20)
-        .frame(alignment: .center)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.white)
         .cornerRadius(10.0)
